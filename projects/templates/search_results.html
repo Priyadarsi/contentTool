@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <h1>Search Content</h1>
+    <title>Content</title>
+  </head>
+  <body>
+    <h2>Your search results:</h2>
+    <ul>
+
+    {% for content in summary %}
+    <li class="page-item disabled">
+      {{ content }} <br>
+      {{ summary[content] }} <br> <br>
+
+    </li>
+    {% endfor %}
+
+  </ul>
+  </body>
+</html>
