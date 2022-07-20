@@ -6,12 +6,15 @@
     <title>Content</title>
   </head>
   <body>
+    <form class="" action= "{{url_for('content_tool.search')}}" method="post">
+      <input type="submit" value="Back to Search Page">
+    </form>
     <h2>Your search results:</h2>
     <ol>
     {% for link in summary %}
     <li class="page-item disabled">
       <h3>Website:</h3>
-      <a href="{ link }"></a>{{ link }} <br>
+      <a href="{{link}}">{{ link }}</a> <br>
       <h3>Summary:</h3>
       {{ summary[link] }} <br>
       <h3>Content:</h3>

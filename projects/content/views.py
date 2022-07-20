@@ -12,6 +12,6 @@ def search():
 
         title = form.title.data
         summary, description, length = searchObj.bot(title)
-        return render_template('search_results.html', summary = summary, description = description, length = length)
+        return render_template('search_results.html', summary = summary, description = description, length = length, content_tool = content_tool)
 
     return render_template('search_page.html', form = form)
