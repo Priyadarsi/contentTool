@@ -11,11 +11,7 @@ def search():
     if form.validate_on_submit():
 
         title = form.title.data
-        #summary = "Summary"
-        summary = searchObj.bot(title)
-        return render_template('search_results.html', summary = summary)
+        summary, description, length = searchObj.bot(title)
+        return render_template('search_results.html', summary = summary, description = description, length = length)
 
     return render_template('search_page.html', form = form)
-
-#@content_tool.route('/results', methods = ['GET', 'POST'])
-#def search_results(title):

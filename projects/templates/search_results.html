@@ -7,16 +7,19 @@
   </head>
   <body>
     <h2>Your search results:</h2>
-    <ul>
-
-    {% for content in summary %}
+    <ol>
+    {% for link in summary %}
     <li class="page-item disabled">
-      {{ content }} <br>
-      {{ summary[content] }} <br> <br>
-
+      <h3>Website:</h3>
+      <a href="{ link }"></a>{{ link }} <br>
+      <h3>Summary:</h3>
+      {{ summary[link] }} <br>
+      <h3>Content:</h3>
+      {{ description[link] }} <br>
+      <h3>Word Count:</h3>
+      {{ length[link] }} <br><br>
     </li>
     {% endfor %}
-
-  </ul>
+  </ol>
   </body>
 </html>
