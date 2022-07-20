@@ -1,8 +1,6 @@
 import nltk
 from nltk.chat.util import Chat, reflections
 from newspaper import Article
-import nltk
-import time
 nltk.download('punkt')
 
 class searchbot:
