@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <h1>Search Content</h1>
-    <title>Content</title>
-  </head>
+{% extends "base.html" %}
+{% block content %}
+
   <body>
+    <h1>Search Content</h1>
     <form class="" action= "{{url_for('content_tool.search')}}" method="post">
       <input type="submit" value="Back to Search Page">
     </form>
@@ -25,4 +22,5 @@
     {% endfor %}
   </ol>
   </body>
-</html>
+
+{% endblock %}

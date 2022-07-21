@@ -4,7 +4,7 @@ from projects.content.search import searchbot
 
 content_tool = Blueprint('content_tool', __name__)
 
-@content_tool.route('/', methods=['GET', 'POST'])
+@content_tool.route('/search', methods=['GET', 'POST'])
 def search():
     form = ContentForm()
     searchObj = searchbot()
